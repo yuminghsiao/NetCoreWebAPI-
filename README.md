@@ -1,4 +1,4 @@
-WEBAPI實作JWT登入機制
+WEBAPI實作JWT登入機制,以及簡易的VUE3功能,EX:輪播圖
 
 開發工具 vscode, Visual Stidio, sql server
 
