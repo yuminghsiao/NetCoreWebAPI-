@@ -1,0 +1,12 @@
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\bin\Debug\net6.0\WebAPIPractise.Model.deps.json
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\bin\Debug\net6.0\WebAPIPractise.Model.dll
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\bin\Debug\net6.0\WebAPIPractise.Model.pdb
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\obj\Debug\net6.0\WebAPIPractise.Model.csproj.AssemblyReference.cache
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\obj\Debug\net6.0\WebAPIPractise.Model.GeneratedMSBuildEditorConfig.editorconfig
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\obj\Debug\net6.0\WebAPIPractise.Model.AssemblyInfoInputs.cache
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\obj\Debug\net6.0\WebAPIPractise.Model.AssemblyInfo.cs
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\obj\Debug\net6.0\WebAPIPractise.Model.csproj.CoreCompileInputs.cache
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\obj\Debug\net6.0\WebAPIPractise.Model.dll
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\obj\Debug\net6.0\refint\WebAPIPractise.Model.dll
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\obj\Debug\net6.0\WebAPIPractise.Model.pdb
+F:\NetCoreWebAPI\WebAPI\WebAPI.Model\obj\Debug\net6.0\ref\WebAPIPractise.Model.dll

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2022-04-08T08:56:35.6157209Z;True|2022-04-08T15:48:08.2803288+08:00;</History>
+  </PropertyGroup>
+</Project>

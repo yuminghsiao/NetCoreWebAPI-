@@ -1,0 +1,12 @@
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\bin\Release\net6.0\WebAPIPractise.Common.deps.json
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\bin\Release\net6.0\WebAPIPractise.Common.dll
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\bin\Release\net6.0\WebAPIPractise.Common.pdb
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\obj\Release\net6.0\WebAPIPractise.Common.csproj.AssemblyReference.cache
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\obj\Release\net6.0\WebAPIPractise.Common.GeneratedMSBuildEditorConfig.editorconfig
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\obj\Release\net6.0\WebAPIPractise.Common.AssemblyInfoInputs.cache
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\obj\Release\net6.0\WebAPIPractise.Common.AssemblyInfo.cs
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\obj\Release\net6.0\WebAPIPractise.Common.csproj.CoreCompileInputs.cache
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\obj\Release\net6.0\WebAPIPractise.Common.dll
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\obj\Release\net6.0\refint\WebAPIPractise.Common.dll
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\obj\Release\net6.0\WebAPIPractise.Common.pdb
+F:\NetCoreWebAPI\WebAPI\WebAPI.Common\obj\Release\net6.0\ref\WebAPIPractise.Common.dll

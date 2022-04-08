@@ -1,0 +1,883 @@
+﻿WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {a1cd3c10-8339-41a9-9fd0-34c551825a10} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+ERROR 22 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18014398515387564294", Request ID "80000107-0001-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 13 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18230571310386249795", Request ID "80000044-0004-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 25 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18014398545452335399", Request ID "80000128-0008-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 25 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18014398545452335399", Request ID "80000129-0008-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 25 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18014398545452335399", Request ID "8000012a-0008-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 21 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18014398515387564294", Request ID "80000108-0001-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 39 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17870283331606675905", Request ID "800001c2-0002-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 36 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18230571323271151734", Request ID "80000077-0007-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 51 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18158513716348322118", Request ID "80000147-0004-fc00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+INFO 53 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {f6d2c0f1-1b17-4b99-98a5-815b9cfe60e3} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+ERROR 6 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18302628934488948831", Request ID "80000060-000b-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 10 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17798225754748616999", Request ID "80000128-0006-f700-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 10 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17798225754748616999", Request ID "80000129-0006-f700-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 6 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18302628930193981757", Request ID "8000013e-000a-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 6 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17798225754748616999", Request ID "8000012a-0006-f700-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 6 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17798225754748616999", Request ID "8000012b-0006-f700-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 6 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17798225754748616999", Request ID "8000012c-0006-f700-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+INFO 21 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {52c667fe-c2d5-4a5b-858a-d7872a76b4a6} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+ERROR 6 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17870283331606675907", Request ID "800001c4-0002-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+INFO 24 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {ffe3cf5f-c74b-4c32-94ec-6809ddc20301} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+ERROR 6 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18014398515387564297", Request ID "8000010a-0001-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 10 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17870283344491577518", Request ID "800000af-0005-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+INFO 20 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {28450c06-500d-4c43-938c-1c11cf34e0a0} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+INFO 3 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {b87fb304-b750-48fc-9217-86c7d16f356a} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+INFO 13 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {7f3a1247-420a-4471-9687-67f12303e16b} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+INFO 12 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {30f59deb-c6b1-4e0b-9430-aefe115fff10} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+INFO 3 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {a6066931-1d76-4a78-986b-0e1946c79572} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+INFO 16 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {620af267-1d60-4d48-8ce6-3482a02eaa3d} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+ERROR 6 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17798225754748617009", Request ID "80000136-0006-f700-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 12 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "17870283331606675912", Request ID "800001c9-0002-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。.
+English Message : Connection open error . 無法開啟登入所要求的資料庫 "WebAPI"。登入失敗。
+使用者 'IIS APPPOOL\WebApiTest' 的登入失敗。
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+INFO 41 Microsoft.Hosting.Lifetime - Application is shutting down...
+WARN 1 Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+WARN 1 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {7fa95a9b-eb82-408b-81a9-f8d814d7274d} may be persisted to storage in unencrypted form.
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Production
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\bin\Release\net6.0\publish\
+ERROR 8 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18230571301796316096", Request ID "800003c1-0002-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method6(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+ERROR 8 Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18230571301796316096", Request ID "800003c2-0002-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.)
+ ---> SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：The connection was not closed. The connection's current state is connecting..
+English Message : Connection open error . The connection was not closed. The connection's current state is connecting.
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at SqlSugar.QueryableProvider`1.FirstAsync()
+   at SqlSugar.QueryableProvider`1.FirstAsync(Expression`1 expression)
+   at WebAPIPractise.Service.User.UserService.CheckLogin(LoginDto login) in F:\NetCoreWebAPI\WebAPI\WebAPI.Service\User\UserService.cs:line 27
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at WebAPI.Controllers.LoginController.CheckLogin(String qq, String pwd, String validateKey, String validateCode) in F:\NetCoreWebAPI\WebAPI\WebAPI\Controllers\LoginController.cs:line 51
+   at lambda_method6(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()

@@ -1,0 +1,52 @@
+﻿INFO 1 Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5217
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Development
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\
+INFO 28 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 6 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 6 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 29 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 38 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 39 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 35 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 57 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 57 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 57 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 61 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 61 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 62 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 79 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 77 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 84 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 84 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 95 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 95 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 94 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 99 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 99 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 106 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 109 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 105 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 109 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 1 Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5217
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Development
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\
+INFO 9 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 19 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 32 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 35 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 35 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 41 WebAPI.Controllers.UserController - 進入getcoureses
+INFO 1 Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5217
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Development
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\
+INFO 1 Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5217
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Development
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\
+INFO 1 Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5217
+INFO 1 Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+INFO 1 Microsoft.Hosting.Lifetime - Hosting environment: Development
+INFO 1 Microsoft.Hosting.Lifetime - Content root path: F:\NetCoreWebAPI\WebAPI\WebAPI\
